@@ -32,6 +32,7 @@ for linha in pagina_clientes.iter_rows(min_row = 2,values_only=True):
     sleep(1)
     botao_consultar.click()
     sleep(4)
+    
 # Status
     status = driver.find_element(By.XPATH,"//span[@id='statusLabel']")
     if status.text == 'em dia':
