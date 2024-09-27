@@ -3,9 +3,13 @@ import openpyxl
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
+from pathlib import Path
+import os
 
 # Entrar na planilha e extrair dados
-planilha_clientes = openpyxl.load_workbook('dados_clientes.xlsx')
+planilha_path = os.getcwd() + '/dados_clientes.xlsx'
+print(planilha_path)
+planilha_clientes = openpyxl.load_workbook(planilha_path)
 pagina_clientes = planilha_clientes['Sheet1']
 
 # Entrar no site
